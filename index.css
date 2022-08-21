@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap');
+html{
+    font-family: 'Nunito Sans', sans-serif;
+    /* font-size: 50%; */
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+    /*######################################################################### */
+                     /* style for navbar desktop */
+
+.navbar input[type="checkbox"], 
+.navbar .hamburger-lines  {
+    display: none;
+}    
+
+.navbar{
+    width: 100%;
+    background: #ffff;
+    box-shadow: 0px 2px 2px 3px #aaaa;
+    position: fixed;
+    display: flex;
+    /* height: 65px; */
+    justify-content: space-between;
+   margin: auto;
+   opacity: 0.9;
+   z-index: 10;
+}
+.navbar .menu-items{
+    display: flex;
+    order:2;
+    text-align: center;
+    margin-right: 2.3em;
+}
+
+.navbar .menu-items li{
+    list-style: none;
+}
+.navbar a{
+    display: block;
+    justify-content: space-between;
+    margin: 0.6em;
+    text-decoration: none; 
+    font-weight: 800;
+    color:rgba(0, 0, 0);
+    transition: all 0.6s ease-in-out;
+}
+.navbar a:hover{
+    color: green;
+}
+.navbar .logo{
+    order: 1;
+    font-weight: 800;
+}
+.navbar-containt{
+    text-align: center;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    /*######################################################################### */
+                     /* style for section1 desktop */
+
+ .mybutton{
+    height: 40px;
+    width: 70px;
+    border-radius:40%;
+    border: none;
+    background-color: green;
+   box-shadow: 2px 2px 0px 0.8px #aaaa;
+   padding: 0.5em;
+   margin-top: 0.8em;
+   transition: all 0.5s ease-in-out;
+}
+.section1 a{
+    color:#ffff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.section1{
+    height: 60vh;
+    background:linear-gradient(rgba(240,240,240,0.144),rgba(255,255,255,0.234)) ,url("./img12.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    box-shadow: #aaaa;
+}
+.secIp{
+    margin-top: 0.5em;
+}
+
+.section1 .mybutton:hover{
+    background: #aaaa;
+   
+}
+.section1 a:hover{
+     color: black;
+}
+           /*######################################################################### */
+                     /* style for section2 about us desktop */
+.section2{
+    background:  #f5f5f7;
+    width: 100%;
+    box-shadow: #aaaa;
+}                     
+.section2 .wrapper{
+ margin: auto;
+ background: #f5f5f7;
+ /* border: 2px solid red; */
+ display: flex;
+ max-width: 1200px;
+}   
+.secIIcontaint{
+    /* border: 2px solid green; */
+    flex-basis: 50%;
+    padding-top:1em;
+    margin: auto;
+    transform: translate(-150%);
+    animation: animetext 1s ease-in-out forwards;
+}
+
+@keyframes animetext {
+    100%{
+        transform: translate(0);
+    }
+}
+.secIIimage{
+    /* border: 2px solid orangered; */
+    flex-basis: 50%;
+    transform: translate(150%);
+    animation: animeimage 1s ease-in-out forwards;
+}
+@keyframes animeimage{
+    100%{
+        transform: translate(0);
+    }
+}
+.secIIimage img{
+    display: block;
+    height: 400px;
+    max-width: 100%;
+   object-fit: cover;
+   object-position: right;
+}
+.secIIp{
+    color: #a7a5a7;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0.5em 0;
+}
+.secIIh{
+    color: black;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0.5em 0;
+}
+         /*######################################################################### */
+                     /* style for section3 Category of food desktop */
+
+.section3 h1{
+  margin: 1.7em 0;
+ /* border: 2px solid red; */
+ text-align: center;
+ color: #ffff;
+ font-weight: 900;
+ /* text-transform: uppercase; */
+}
+.section3 .sec3mainhead{
+  margin: 1.7em 0;
+ /* border: 2px solid red; */
+ text-align: center;
+ color: #a7a5a7;
+ font-weight: 900;
+ text-transform: uppercase;
+ margin-left: 3em;
+}
+.section3{
+    max-width: 1200px;
+}
+ a{
+    color:#ffff;
+    text-decoration: none;
+    cursor: pointer;  
+ }                    
+
+ .foodswrapper{
+    max-width:1200px;
+    display: flex; 
+    /* border: 2px solid green; */
+    margin-left: 8em;
+ }
+ 
+ .foodswrapper img {
+    width: 100%;
+    display: block;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+    margin: auto;
+ }
+
+.images{
+    margin: 0rem 1.9rem;
+    border-radius: 5px;
+    box-shadow: #aaaa;
+    background: #f5f5f7;
+    position: relative;
+}
+
+     /* ########################### image overlays #################################### */
+
+.foodscontaint{
+    position:absolute;
+    /* display: block; */
+    top:13%;
+    left:-20%;
+    transform: translate(-50%,50%);
+   text-align: center;
+   /* border: 2px solid red; */
+   margin-left: 7.5em;
+   z-index: 2;
+   opacity: 1;
+    transition: all 0.4s ease-in-out;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+}
+.grainsimage{
+    width: 33%;
+    height: 300px;
+    /* border: 2px solid red; */
+     box-shadow: 0px 5px 3px 2px #aaaa;
+}
+.fruitimage{
+    width: 33%;
+    height: 300px;
+     box-shadow: 0px 5px 3px 2px #aaaa;
+    /* border: 2px solid red; */
+}
+.vegetableimage{
+    width: 33%;
+    height: 300px;
+    box-shadow: 0px 5px 3px 2px #aaaa;
+    /* border: 2px solid red; */
+}
+.images::after{
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.8766);
+    position: absolute;
+    top: 0%;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+}
+
+.images:hover::after{
+  display: block;
+  opacity: 1;
+  transform: scaleY(1);
+}
+.images:hover .foodscontaint{
+     transform: translate(-50%,50%);
+    transform: scaleY(1);
+     opacity: 1; 
+}
+
+        /* #######################section4 menu bar ################################## */
+ .section4{
+    /* border: 2px solid red; */
+    padding-top: 4.2em;
+    text-align: center;
+ }
+
+ .menuimages{
+    height: 300px;
+    width: 300px;
+    /* border: 2px solid green; */
+    border-radius: 50%;
+    display: flex;
+ }
+ .menubars{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em 0em;
+    margin-left: 10%;
+ }
+  .menuimages img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 2px 0px 2px 3px;
+  }
+
+ .menubars .allitems{
+    display: flex;
+    width: 40%;
+    margin:1em 1em;
+  }
+ .allitems .menuimages{
+    display: flex;
+    width: 50%;
+ } 
+ .allitems .menucontaints{
+    display: flex;
+    /* border: 2px solid greenyellow; */
+    flex-direction: column;
+    width: 50%;
+    padding: 1em 0;
+    box-shadow: 2px 0px 2px 2px;
+    margin-left: 0.8em;
+ }
+.food-price
+{
+    font-weight: 700;
+}
+
+    /* ############################# section5 testimonial #################### */
+.section5{
+    /* border:2px solid red; */
+    padding: 2em 0em;
+    text-align: center;
+    background: rgba(240,240,240,0.144)
+}
+.customerreviews{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cutomerimage{
+    height:250px;
+    width: 250px;
+    border-radius: 50%;
+}
+.cutomerimage img{
+    height:100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 1px 0px 2px 1px;
+    margin-left: 50%;
+}
+
+.customerreviews .cutomersays{
+    display: flex;
+    justify-content: space-between;
+    width: 33%;
+    flex-direction: column;
+    text-align: center;
+    /* border: 2px solid red; */
+    padding: 1em 0em;
+}
+.checked{
+    color: gold;
+    margin-bottom: 1em;
+}
+.section5 h4{
+    margin-top: 1em;
+     /* color: #ffff; */
+}
+.section5 h2{
+    /* color: #ffff; */
+    color: black;
+}
+.section5 p{
+    margin-bottom: 1em;
+     /* color: #ffff; */
+}
+
+    /* ############################ Section6 contact-us design ###################### */
+
+.section6{
+    background: #f1f0f1;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap: wrap;
+}
+.contactdescription{
+    background: #ffff;
+}
+label::after{
+content: "*";
+display: inline-block;
+color: red;
+font-size: 1.2rem;
+}
+form{
+    font-size: 1.1rem;
+}
+.contactdetails{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contactimage img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.contactdetails{
+ margin:2em 8em;
+ width: 100%;
+ /* border: 2px solid mediumorchid; */
+}
+.contactdetails .contactimage{
+    display: flex;
+    width: 50%;
+}
+.contactdetails .contactdescription{
+    display: flex;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+form{
+    margin: 1em 1em;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+}
+.contactdetails .contactdescription form{
+    margin: auto;
+}
+
+.contactdetails .contactdescription form input{
+    display: block;
+    margin: auto;
+    margin-top: 0.8em 0em;
+    height: 30px;
+}
+
+.contactdetails .contactdescription form input[type="radio"]{
+    display: inline-block;
+}
+
+#footer{
+    text-align: center;
+    background: rgba(102, 102, 102, 0.667);
+    color:white;
+    font-size: 2rem;
+}
+#footer h3{
+    font-size: 1rem;
+}
+         /* ################# mediaqueries  ###3############################## */ 
+
+@media(max-width:768px){
+    .navbar{
+        opacity: 0.95;
+    }
+.navbar input[type="checkbox"], 
+.navbar .hamburger-lines {
+    display: block;
+}    
+ .navbar-container{
+    display: block;
+    position: relative;
+    height: 64px;   
+ }
+ .navbar-container input[type="checkbox"]{
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 50px;
+    z-index: 10;
+    opacity: 0;
+    top:20px;
+    left:25px;
+ }
+ .navbar-container .hamburger-lines{
+    position: absolute;
+    height: 30px;
+    width: 40px;
+    z-index:4;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top:20px;
+    left:20px;
+ }
+.hamburger-lines .lines{
+    height: 3px;
+    background: #333;
+    width: 100%;
+    display: block;
+ }
+.navbar-container .hamburger-lines .line1{
+   transition: transform 0.3s ease-in-out;
+   transform-origin: 0% 0%;
+ }
+.navbar-container .hamburger-lines .line2{
+   transition: transform 0.3s ease-in-out;
+ }
+.navbar .navbar-container .hamburger-lines .line3{
+   transition: transform 0.3s ease-in-out;
+   transform-origin: 0% 100%;
+ }
+ .navbar  .menu-items{
+     padding-top: 100px;
+     height: 100vh;
+     max-width: 300px;
+     display: flex;
+     flex-direction: column;
+     box-shadow:5px 0px 10px 0px  #aaaa;  
+     transform: translateX(-150%);
+     margin-left: -40px;
+     padding-left: 50px;
+     transition: transform 0.4s ease-in-out;
+     background: #fff;
+ }
+ .navbar .menu-items li{
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+ }
+ .logo{
+    position: absolute;
+    font-size: 2rem;
+    margin-top: 25px;
+    margin-right: 15px;
+ }
+
+ .navbar-container input[type="checkbox"]:checked ~ .menu-items{
+    transform: translateX(0);
+ }
+ .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+    transform: rotate(45deg);
+ }
+ .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+    transform: scale(0);
+ }
+.navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+    transform: rotate(-45deg);
+ }
+}
